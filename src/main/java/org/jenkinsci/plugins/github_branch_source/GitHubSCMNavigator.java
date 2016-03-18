@@ -190,7 +190,15 @@ public class GitHubSCMNavigator extends SCMNavigator {
         private static final Logger LOGGER = Logger.getLogger(DescriptorImpl.class.getName());
 
         @Override public String getDisplayName() {
-            return "GitHub Organization";
+            return Messages.GitHubSCMNavigator_displayName();
+        }
+
+        public String getDescription() {
+            return Messages.GitHubSCMNavigator_description();
+        }
+
+        public String getCategoryId() {
+            return "itemcategory-standalone";
         }
 
         @Override public SCMNavigator newInstance(String name) {
